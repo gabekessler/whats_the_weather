@@ -10,8 +10,24 @@
   </head>
 
   <body>
+    <nav class="navbar bg-dark" data-bs-theme="dark">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">Whats the Weather?</span>
+      </div>
+    </nav>
     <div class="container">
-      <%= yield %>
+      <div class="row">
+        <div class="col-md-12">
+          <% flash.each do |type, msg| %>
+            <div>
+              <%= msg %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="row">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>
