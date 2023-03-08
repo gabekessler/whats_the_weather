@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_08_031853) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_08_040118) do
   create_table "addresses", force: :cascade do |t|
     t.string "street"
     t.string "city"
@@ -21,6 +21,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_08_031853) do
     t.decimal "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "weathers", force: :cascade do |t|
+    t.integer "temperature"
+    t.string "forecast"
+    t.integer "address_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["address_id"], name: "index_weathers_on_address_id"
   end
 
 end
