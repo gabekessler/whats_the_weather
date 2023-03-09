@@ -1,0 +1,13 @@
+<div class="card text-bg-info mb-3">
+    <div class="card-header">
+        Forecast
+        <% if @cached %>
+        <span class="badge text-bg-secondary">Recent!</span>
+        <% end %>
+    </div>
+  <div class="card-body">
+    <p>
+        <%= @display_weather.try(:html_safe) %>
+    </p>
+  </div>
+</div>

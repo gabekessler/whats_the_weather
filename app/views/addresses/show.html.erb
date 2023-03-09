@@ -1,10 +1,10 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @address %>
-
-<div>
-  <%= link_to "Edit this address", edit_address_path(@address) %> |
-  <%= link_to "Back to addresses", addresses_path %>
-
-  <%= button_to "Destroy this address", @address, method: :delete %>
+<div class="row">
+  <div class="col-md-6">
+    <%= render "form", address: @new_address %>
+  </div>
+  <div class="col-md-6">
+    <%= render "address", address: @display_address if @display_address %>
+    <%= render "forecast", locals: { weather: @display_weather, cached: @cached } if @display_weather %>  
+  </div>
 </div>
+
