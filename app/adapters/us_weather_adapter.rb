@@ -12,7 +12,7 @@ class UsWeatherAdapter
    
                 weather_output(parsed_weather["temperature"], parsed_weather["detailedForecast"])
             rescue => e
-                {errors: e}
+                Rails.logger.debug("ERROR #{e}")
             end
         end
 
