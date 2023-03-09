@@ -1,19 +1,37 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  street: MyString
-  city: MyString
-  state: MyString
-  zipcode: 1
-  country: MyString
+good:
+  street: "4712 wood valley dr"
+  city: "raleigh"
+  state: "NC"
+  zipcode: 27613
+  country: "US"
   latitude: 9.99
   longitude: 9.99
 
-two:
-  street: MyString
-  city: MyString
-  state: MyString
+no_geocode:
+  street: "471233434 wood valley dr"
+  city: "raleigh"
+  state: "NC"
   zipcode: 1
-  country: MyString
+  country: "US"
+  latitude: null
+  longitude: null
+
+no_zipcode:
+  street: "4712 wood valley dr"
+  city: "raleigh"
+  state: "NC"
+  zipcode: null
+  country: "US"
+  latitude: 9.99
+  longitude: 9.99
+
+no_street:
+  street: null
+  city: "raleigh"
+  state: "NC"
+  zipcode: 27613
+  country: "US"
   latitude: 9.99
   longitude: 9.99
