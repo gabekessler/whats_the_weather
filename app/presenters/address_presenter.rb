@@ -10,7 +10,7 @@ class AddressPresenter
         if @address.nil?
             "We're sorry, but we cannot find that address."
         else
-            "#{@address.street.titleize}<br />#{@address.city.titleize} #{@address.state.upcase}, #{@address.zipcode.to_s}"
+            "#{@address.street.titleize}<br />#{@address.city.titleize}, #{@address.state.upcase} #{@address.zipcode.to_s}"
         end
     end
 end
